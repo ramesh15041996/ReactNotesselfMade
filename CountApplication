@@ -1,0 +1,42 @@
+import React from "react";
+
+class App extends React.Component {
+
+
+  constructor(){
+    super()
+    this.state={
+      
+      count:0
+    
+    }
+  }
+  render() {
+    
+    return(
+      <React.Fragment>
+        <h1>Counter Application</h1>
+        <h3>{this.state.count}</h3>
+        <h4>my name is {this.state.name}</h4>
+        <button onClick={(e)=>{
+          if(this.state.count < 15){
+          this.setState({
+        count:this.state.count+1,
+        name:"ramesh"
+        })
+      }
+        
+         } }>Increment Count</button>
+         <button onClick={(e)=>{
+          if(this.state.count > 0){
+          this.setState({
+        count:this.state.count-1
+        })
+      }
+         } }>Decrement Count</button>
+         </React.Fragment>
+    );
+  }
+}
+
+export default App
